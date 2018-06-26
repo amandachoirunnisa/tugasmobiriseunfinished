@@ -13,12 +13,12 @@
         "warningColor": "#879A9F",
         "dangerColor": "#B1A374",
         "mainFont": "Rubik",
-        "display1Font": "Roboto Condensed",
+        "display1Font": "Anton",
         "display1Size": 4.25,
-        "display2Font": "Rubik",
+        "display2Font": "Fjalla One",
         "display2Size": 3,
-        "display5Font": "Rubik",
-        "display5Size": "1.5",
+        "display5Font": "Questrial",
+        "display5Size": "1",
         "display7Font": "Rubik",
         "display7Size": 1,
         "display4Font": "Rubik",
@@ -28,7 +28,13 @@
         "isScrollToTopButton": false
       },
       "additionalSetColors": [
-        "#4b0404"
+        "#032f55",
+        "#0d0d0d",
+        "#4b0404",
+        "#143aae",
+        "#ff0000",
+        "#000080",
+        "#800000"
       ]
     },
     "path": "@PROJECT_PATH@",
@@ -57,12 +63,32 @@
         "css": "'Roboto Condensed', sans-serif",
         "name": "Roboto Condensed",
         "url": "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i"
+      },
+      {
+        "css": "'Abril Fatface', display",
+        "name": "Abril Fatface",
+        "url": "https://fonts.googleapis.com/css?family=Abril+Fatface:400"
+      },
+      {
+        "css": "'Questrial', sans-serif",
+        "name": "Questrial",
+        "url": "https://fonts.googleapis.com/css?family=Questrial:400"
+      },
+      {
+        "css": "'Fjalla One', sans-serif",
+        "name": "Fjalla One",
+        "url": "https://fonts.googleapis.com/css?family=Fjalla+One:400"
+      },
+      {
+        "css": "'Anton', sans-serif",
+        "name": "Anton",
+        "url": "https://fonts.googleapis.com/css?family=Anton:400"
       }
     ],
     "favicon": "",
     "noImageResize": "",
     "versionFirst": "4.7.6",
-    "uniqCompNum": 20,
+    "uniqCompNum": 57,
     "versionPublish": "4.7.6",
     "screenshot": "screenshot.png"
   },
@@ -89,17 +115,28 @@
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            "H1": {
-              "color": "#f7ed4a"
+            ".mbr-figure": {
+              "margin": "0 auto",
+              "width": "100%",
+              "display": "flex",
+              "justify-content": "center",
+              "img": {
+                "height": "100%",
+                "margin": "0 auto"
+              }
             },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#efefef"
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "img": {
+                  "width": "100% !important"
+                }
+              }
             }
           },
-          "_name": "header6",
-          "_customHTML": "<section class=\"header6\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#555555\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=H_d0iK5uNcM&feature=youtu.be\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    Male Cheerleading</h1>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Identik dengan kaum wanita, namun bukan berarti pria tidak boleh ikut serta.&nbsp;</p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                        <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                        <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_cid": "qTYsW8wFQj",
-          "_anchor": "header6-0",
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"100\" step=\"5\" value=\"90\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#5c698e\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=7HmEwljJ_GM&feature=youtu.be\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"media-content col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"></h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-white mbr-light pb-3 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-2\">\n                    Beautiful mobile websites\n                </h3>\n                <div class=\"mbr-text align-center mbr-white pb-3\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text, .mbr-section-btn\"></p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n            <div class=\"mbr-figure pt-5\">\n                <img src=\"@PROJECT_PATH@/assets/images/cheer-2-1920x1080.png\" alt=\"Mobirise\" mbr-style=\"{'width': mediaSize + '%'}\" title>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW1b3mxzT3",
+          "_anchor": "header4-u",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -119,7 +156,7 @@
             },
             ".section-text": {
               "padding": "2rem 0",
-              "color": "#073b4c"
+              "color": "#032f55"
             },
             ".inner-container": {
               "margin": "0 auto"
@@ -131,7 +168,7 @@
             }
           },
           "_name": "content9",
-          "_customHTML": "<section class=\"mbr-section article content9\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"100\">\n        <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"25\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#149dcc\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n            <div class=\"section-text align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".section-text\" mbr-text>here's the thing, back in the day, a lot of guys would make fun of me, that I would sing and dance, that I was a cheerleader. But I kept my head on straight. I had goals.&nbsp;<br>-Carlos Pena</div>\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n        </div>\n        </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section article content9\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"100\">\n        <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"25\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#149dcc\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n            <div class=\"section-text align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".section-text\" mbr-text>Here's the thing, back in the day, a lot of guys would make fun of me, that I would sing and dance, that I was a cheerleader. But I kept my head on straight. I had goals.&nbsp;<br>-Carlos Pena</div>\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n        </div>\n        </div>\n</section>",
           "_cid": "qTYt2kl01J",
           "_anchor": "content9-1",
           "_protectedParams": [],
@@ -150,14 +187,14 @@
               "background-image": "url(@bg-value)"
             },
             "I": {
-              "color": "#ff3366"
+              "color": "#ff0000"
             },
             "H2": {
-              "color": "#ff3366"
+              "color": "#ff0000"
             }
           },
           "_name": "content5",
-          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/1938-cheerleaders-first-female-squad-2-648x256.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\">\n                    Sejarah <i>Cheerleader</i></h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\"></h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/1938-cheerleaders-first-female-squad-648x403.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\">\n                    S e j a r a h &nbsp;&nbsp;<br><i>C h e e r l e a d e r &nbsp;</i></h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\"></h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "qTYtcw4ltZ",
           "_anchor": "content5-2",
           "_protectedParams": [],
@@ -170,20 +207,18 @@
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor",
-            ".mbr-text": {
+            ".mbr-text, blockquote": {
               "color": "#767676"
             },
             ".mbr-text P": {
-              "color": "#073b4c"
-            },
-            ".mbr-text DIV": {
-              "color": "#073b4c"
+              "text-align": "left",
+              "color": "#ffffff"
             }
           },
-          "_name": "content3",
-          "_customHTML": "<section mbr-id=\"_anchor\" mbr-paddings class=\"mbr-section article content3\">\n      \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) --> \n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->     \n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"row col-12 col-md-8\">\n                <div class=\"col-12 col-md-6 pr-lg-4 mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-article data-app-selector=\".mbr-text\" data-multiline><p>&nbsp;&nbsp;&nbsp;&nbsp;Apakah kamu suka menonton pertandingan basket? Ketika pertandingan basket akan dimulai, pasti ada pemandu sorak yang turun ke tengah lapangan. Mereka cantik dan berpakaian mini, menari, meloncat, dan membuat formasi-formasi unik yang membuat kita berdecak kagum. Tim lincah inilah yang disebut <i>cheerleader</i>. Akan tetapi tahukah kamu bagaimana awal mula <i>cheerleader</i>?</p><div>&nbsp;&nbsp;&nbsp;&nbsp;<i>Cheerleade</i>r atau dalam bahasa Indonesia “pemandu sorak” adalah sekelompok orang yang melakukan suatu konsep. Konsep yang dimaksudkan adalah perpaduan antara tarian, senam, dan sorak sorai untuk mendukung tim basket sekolahnya yang sedang bertanding bahkan bisa sebagai olahraga yang dilombakan sebagai kompetisi\n</div><div><br></div><div>&nbsp; &nbsp; &nbsp;Pemandu sorak atau dalam bahasa Inggris <i>Cheerleader</i> dapat diartikan juga sebagai perpaduan gerakan dinamis senam, tari, akrobatik, dan sorak-sorai untuk memberi semangat tim olahraga yang sedang bertanding, atau sebagai olahraga yang diperlombakan secara kompetisi. Para pemandu sorak bertugas memimpin teriakan-teriakan untuk memberi semangat dan motivasi kerumunan orang.\n<br></div><div><br></div><div><br></div><p></p></div>\n                <div class=\"col-12 col-md-6 pl-lg-4 mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-article data-app-selector=\".mbr-text\" data-multiline><p>&nbsp; &nbsp;<span style=\"font-size: 1rem;\">Pada umumnya kita semua tahu bahwa pengikut tim cheerleading adalah “perempuan” tapi jangan salah, banyak juga laki-laki yang mengikuti <i>cheerleading</i>. Apalagi orang yang pertama kali menciptakan <i>cheerleading</i> dan menjadi cheerleader itu adalah laki-laki. Jhonny Champbell adalah orang yang mendirikan <i>cheerleading</i> dengan cara mengumpulkan teman-teman kampusnya untuk mendukung tim <i>American Football </i>kampus mereka di <i>University of Minnesota</i>, Amerika Serikat pada 2 November 1898.&nbsp;</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-size: 1rem;\">Pada awalnya <i>Cheerleading</i> lebih banyak diikuti oleh laki-laki, namun sejak tahun 1923 perempuan diperbolehkan masuk tim karena kekurangan orang yang disebabkan saat masa itu banyak laki-laki yang sedang sibuk mengikuti perang.\n</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-size: 1rem;\">Kini, <i>Cheerleading</i> terbagi dalam beberapa kategori berdasarkan anggota timnya. Ada tim <i>All Males </i>yang terdiri dari semua anggota laki-laki, <i>All Girls</i> yang diisi oleh perempuan, dan ada tim<i> Coed</i> yang merupakan gabungan dari anggota perempuan dan laki-laki.\n</span></p><p><span style=\"font-size: 1rem;\"><br></span></p><div><br></div><p></p></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "qTYtgUEoxI",
-          "_anchor": "content3-3",
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#032f55\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p>&nbsp;&nbsp;&nbsp;&nbsp;Apakah kamu suka menonton pertandingan basket? Ketika pertandingan basket akan dimulai, pasti ada pemandu sorak yang turun ke tengah lapangan. Mereka cantik dan berpakaian mini, menari, meloncat, dan membuat formasi-formasi unik yang membuat kita berdecak kagum. Tim lincah inilah yang disebut <i>cheerleader</i>. Akan tetapi tahukah kamu bagaimana awal mula <i>cheerleader</i>?</p><p>&nbsp; &nbsp; &nbsp;<i>Cheerleader</i> atau dalam bahasa Indonesia “pemandu sorak” adalah sekelompok orang yang melakukan suatu konsep. Konsep yang dimaksudkan adalah perpaduan antara tarian, senam, dan sorak sorai untuk mendukung tim basket sekolahnya yang sedang bertanding bahkan bisa sebagai olahraga yang dilombakan sebagai kompetisi</p><p>&nbsp; &nbsp; Pemandu sorak atau dalam bahasa Inggris c<i>heerleader</i> dapat diartikan juga sebagai perpaduan gerakan dinamis senam, tari, akrobatik, dan sorak-sorai untuk memberi semangat tim olahraga yang sedang bertanding, atau sebagai olahraga yang diperlombakan secara kompetisi. Para pemandu sorak bertugas memimpin teriakan-teriakan untuk memberi semangat dan motivasi kerumunan orang. \n<br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;Pada umumnya kita semua tahu bahwa pengikut tim <i>cheerleading</i> adalah “perempuan” tapi jangan salah, banyak juga laki-laki yang mengikuti <i>cheerleading</i>. Apalagi orang yang pertama kali menciptakan cheerleading dan menjadi cheerleader itu adalah laki-laki. </p><p>&nbsp;&nbsp;&nbsp;&nbsp;Jhonny Champbell adalah orang yang mendirikan <i>cheerleading</i> dengan cara mengumpulkan teman-teman kampusnya untuk mendukung tim <i>American Football</i> kampus mereka di <i>University of Minnesota</i>, Amerika Serikat pada 2 November 1898.&nbsp;</p><p>&nbsp; &nbsp; Pada awalnya<i> cheerleading</i> lebih banyak diikuti oleh laki-laki, namun sejak tahun 1923 perempuan diperbolehkan masuk tim karena kekurangan orang yang disebabkan saat masa itu banyak laki-laki yang sedang sibuk mengikuti perang.</p><p>&nbsp; &nbsp; Kini, <i>cheerleading</i> terbagi dalam beberapa kategori berdasarkan anggota timnya. Ada tim <i>All Males</i> yang terdiri dari semua anggota laki-laki, <i>All Girls</i> yang diisi oleh perempuan, dan ada tim <i>Coed</i> yang merupakan gabungan dari anggota perempuan dan laki-laki.<br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;<br></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW0YcHwTNP",
+          "_anchor": "content1-k",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -240,7 +275,7 @@
             }
           },
           "_name": "content13",
-          "_customHTML": "<section>\n    <mbr-parameters>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Width\" name=\"contentWidth\" min=\"66\" max=\"100\" value=\"66\" step=\"1\">\n        <input type=\"range\" inline title=\"Sizes\" name=\"proportions\" min=\"30\" max=\"300\" value=\"198\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showCaption\" checked>\n        <input type=\"color\" title=\"Caption Background\" name=\"cpBg\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div class=\"container\">\n            <div class=\"media-container-row\" mbr-style=\"{'width':contentWidth+'%'}\">\n                <div class=\"img-item item1\" mbr-style=\"{'width':proportions+'%'}\">\n                    <a href=\"https://www.instagram.com/p/Bg5nIV9Fn5k/\"><img src=\"@PROJECT_PATH@/assets/images/smale-924x561.jpg\" alt title></a>\n                    <div class=\"img-caption\" mbr-if=\"showCaption\">\n                        <p class=\"mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-7\">\n                            SMALE <i>All Girls Cheerleading</i> (Dok. Instagram)</p>\n                    </div>\n                </div>\n                <div class=\"img-item\">\n                    <a href=\"http://instagram.com/p/BUHBOUEhE76\"><img src=\"@PROJECT_PATH@/assets/images/rainbow-478x598.jpg\" alt title></a>\n                    <div class=\"img-caption\" mbr-if=\"showCaption\">\n                        <p class=\"mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-7\"><i>\n                            Rainbow </i>Thailand <i>All Male Cheerleading</i> (Dok. Instagram)</p>\n                    </div>\n                </div>\n            </div>\n    </div>\n</section>",
+          "_customHTML": "<section>\n    <mbr-parameters>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Width\" name=\"contentWidth\" min=\"66\" max=\"100\" value=\"66\" step=\"1\">\n        <input type=\"range\" inline title=\"Sizes\" name=\"proportions\" min=\"30\" max=\"300\" value=\"198\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showCaption\" checked>\n        <input type=\"color\" title=\"Caption Background\" name=\"cpBg\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#032f55\">\n    </mbr-parameters>\n    <div class=\"container\">\n            <div class=\"media-container-row\" mbr-style=\"{'width':contentWidth+'%'}\">\n                <div class=\"img-item item1\" mbr-style=\"{'width':proportions+'%'}\">\n                    <a href=\"https://www.instagram.com/p/Bg5nIV9Fn5k/\"><img src=\"@PROJECT_PATH@/assets/images/smale-924x561.jpg\" alt title></a>\n                    <div class=\"img-caption\" mbr-if=\"showCaption\">\n                        <p class=\"mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-7\">\n                            SMALE <i>All Girls Cheerleading</i> (Dok. Instagram)</p>\n                    </div>\n                </div>\n                <div class=\"img-item\">\n                    <a href=\"http://instagram.com/p/BUHBOUEhE76\"><img src=\"@PROJECT_PATH@/assets/images/rainbow-478x598.jpg\" alt title></a>\n                    <div class=\"img-caption\" mbr-if=\"showCaption\">\n                        <p class=\"mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-7\"><i>\n                            Rainbow </i>Thailand <i>All Male Cheerleading</i> (Dok. Instagram)</p>\n                    </div>\n                </div>\n            </div>\n    </div>\n</section>",
           "_cid": "qTYHil1QlF",
           "_anchor": "content13-9",
           "_protectedParams": [],
@@ -259,17 +294,17 @@
               "background-image": "url(@bg-value)"
             },
             "H2": {
-              "color": "#149dcc"
+              "color": "#ff0000"
             }
           },
           "_name": "content5",
-          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/male-cheerleader-blog-jpg-210751-630x319.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=zX_2HkSh0YA&feature=youtu.be\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\"><i>\n                    Cheerleader</i> Laki-Laki, Kenapa Tidak?</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Article header with background image and parallax effect\n                </h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/male-cheerleader-blog-jpg-210751-630x319.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=zX_2HkSh0YA&feature=youtu.be\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\"><i>\n                    C h e e r l e a d e r</i>&nbsp; &nbsp;L a k i - L a k i , &nbsp;K e n a p a <br>&nbsp;T i d a k ?&nbsp;</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Article header with background image and parallax effect\n                </h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "qTZeATSd5e",
+          "_anchor": "content5-i",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "content5-i"
+          "_params": {}
         },
         {
           "_styles": {
@@ -277,17 +312,22 @@
             "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor",
             ".mbr-section-subtitle": {
-              "color": "#073b4c"
+              "color": "#073b4c",
+              "text-align": "left"
             },
             "H2": {
               "color": "#ff7f9f"
             },
             ".mbr-section-subtitle DIV": {
-              "color": "#073b4c"
+              "color": "#032f55"
+            },
+            ".mbr-section-subtitle P": {
+              "color": "#032f55",
+              "text-align": "left"
             }
           },
           "_name": "content4",
-          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><i>Cheeleader </i>adalah pengakuan atas kepopuleran pelajar sekolah menengah, meski tidak semua anak dara peduli. Tahukah Anda bahwa sekitar 65% cedera di sekolah berasal dari kelompok ekstrakulikuler pemeriah suasana ini?\n<br><br><div>Dari gerakan <i>cheerleader</i>&nbsp;yang paling berbahaya adalah ketika membentuk piramid. Jika susunan tubuh atau lompatannya meleset, maka akan menyebabkan akibat yabg fatal seperti tulang retak, patah, lumpuh, bahkan kematian pada atletnya.\n</div><div><br></div><div>Walaupun demikian cheerleader tetap saja digandrungi oleh kaum hawa. Namun bagaimana jika laki-laki yang bergabung dengan tim pemandu sorak? Pertanyaan ini tentu sedikit menggelikan jika didengar oleh masyarakat awam di Indonesia yang belum mengetahui sejarah cheerleader sendiri.</div><div><br></div><div>Di Indonesia <i>cheerleader </i>laki-laki masih dianggap sesuatu yang baru, karena banyak dari penilaian khalayak, pemandu sorak haruslah perempuan. Namun, para cheerleader laki-laki dalam tim <i>Dreams All Stars</i> (DAS) memiliki pandangan berbeda. <i>Dreams All Stars</i> merupakan salah satu tim cheerleader di Indonesia yang berada dibawah naungan <i>The A Team Cheerleading Company Indonesia. Dreams All Stars</i> termasuk ke dalam <i>Team Cheerleader Coed</i> yang terdiri dari gabungan perempuan dan laki-laki. <i>The A Team Cheerleading Company</i> merupakan pelopor <i>cheerleader</i> laki-laki di Indonesia melalui <i>Dreams All Stars Cheerleader</i> yang berpusat di Jakarta.\n</div><div><br></div><div><i>Dreams All Stars</i> membuat tampilan berbeda dari dunia <i>cheerleading</i> di Indonesia. Hadirnya laki-laki dalam tim <i>cheerleader</i> memiliki peran yang sangat berarti. Banyak dari cheerleader laki-laki di <i>Dreams All Stars</i> yang terjun ke dunia <i>cheerleading</i> karena panggilan hati, sebab mereka merasa tertarik dengan <i>cheerleading.\n</i></div><div><br></div></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><p>&nbsp;&nbsp;&nbsp;&nbsp;<i>Cheeleader </i>adalah pengakuan atas kepopuleran pelajar sekolah menengah, meski tidak semua anak dara peduli. Tahukah Anda bahwa sekitar 65% cedera di sekolah berasal dari kelompok ekstrakulikuler pemeriah suasana ini?\n<br><br></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Dari gerakan <i>cheerleader</i>&nbsp;yang paling berbahaya adalah ketika membentuk piramid. Jika susunan tubuh atau lompatannya meleset, maka akan menyebabkan akibat yabg fatal seperti tulang retak, patah, lumpuh, bahkan kematian pada atletnya.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Walaupun demikian cheerleader tetap saja digandrungi oleh kaum hawa. Namun bagaimana jika laki-laki yang bergabung dengan tim pemandu sorak? Pertanyaan ini tentu sedikit menggelikan jika didengar oleh masyarakat awam di Indonesia yang belum mengetahui sejarah cheerleader sendiri.</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Di Indonesia <i>cheerleader </i>laki-laki masih dianggap sesuatu yang baru, karena banyak dari penilaian khalayak, pemandu sorak haruslah perempuan. Namun, para cheerleader laki-laki dalam tim <i>Dreams All Stars</i> (DAS) memiliki pandangan berbeda.</div><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;<i>Dreams All Stars</i> merupakan salah satu tim cheerleader di Indonesia yang berada dibawah naungan <i>The A Team Cheerleading Company Indonesia. Dreams All Stars</i> termasuk ke dalam <i>Team Cheerleader Coed</i> yang terdiri dari gabungan perempuan dan laki-laki. <i>The A Team Cheerleading Company</i> merupakan pelopor <i>cheerleader</i> laki-laki di Indonesia melalui <i>Dreams All Stars Cheerleader</i> yang berpusat di Jakarta.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<i>Dreams All Stars</i> membuat tampilan berbeda dari dunia <i>cheerleading</i> di Indonesia. Hadirnya laki-laki dalam tim <i>cheerleader</i> memiliki peran yang sangat berarti. Banyak dari cheerleader laki-laki di <i>Dreams All Stars</i> yang terjun ke dunia <i>cheerleading</i> karena panggilan hati, sebab mereka merasa tertarik dengan <i>cheerleading.\n</i></div><div><br></div><p></p></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "qTYGdHcYRs",
           "_anchor": "content4-8",
           "_protectedParams": [],
@@ -318,7 +358,7 @@
             }
           },
           "_name": "video1",
-          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#b2ccd2\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=L_FyCnwohFM&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"5\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ffffff\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=L_FyCnwohFM&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
           "_cid": "qTYwT3w1WG",
           "_anchor": "video1-5",
           "_protectedParams": [],
@@ -340,16 +380,25 @@
             },
             ".mbr-section-subtitle I": {
               "color": "#073b4c"
+            },
+            ".mbr-section-subtitle P": {
+              "color": "#032f55"
+            },
+            ".mbr-section-subtitle DIV": {
+              "color": "#032f55"
+            },
+            "B": {
+              "color": "#ff0000"
             }
           },
           "_name": "content4",
-          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    Ridwan Fauzi</h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">“Aku pribadi udah mulai suka dengan<i> cheerleading</i> dari SMP, mulai liat-liat ini apasih olahraga apasih? Kebetulan di SMA ada <i>open recruitment</i> ikutlah,” ujar Ridwan Fauzi (31), anggota <i>Dreams All Stars</i> saat ditemui di Gedung Senam Raden Inten, Buaran, Jakarta Timur.\n<div>\n</div><div>Berawal dari merebaknya film <i>Bring It On</i> di tahun 2000 yang menceritakan tentang kehidupan tim pemandu sorak, membuat seorang laki-laki bernama Ridwan Fauzi ini tertarik dengan <i>cheerleading</i>. Ridwan Fauzi biasa disapa Ipit, sudah memasuki tahun ke-16 di dunia <i>cheerleading</i>. Ipit mulai menjalani hari-hari sebagai seorang <i>cheerleader </i>sejak memasuki SMA. Awalnya ia bersama kurang lebih 10 anggota <i>cheerleader</i> laki-laki lainnya dalam tim SMALE (SMA 54 Jakarta), namun hanya ia yang berhasil bertahan hingga saat ini. Hal tersebut memberi kebanggaan bagi dirinya karena ia merasa mempunyai mental yang lebih kuat dibanding teman-temannya sesama <i>cheerleader</i> laki-laki. Karena pada saat itu, di Indonesia sendiri <i>cheerleader</i> laki-laki sangatlah tabu.\n</div><div>\n</div><div>“Karena cinta. Udah suka banget, udah mendarah daginglah bisa dibilang,” ujar Ipit dengan senyumnya yang lebar.\n</div><div>\n</div><div>Ipit merasa kecintaannya terhadap dunia <i>cheerleading</i> mampu memberi semangat untuk mengajak sanak saudaranya ikut bergabung ke dunia <i>cheerleading</i>. Begitu banyak manfaat <i>cheerleading</i> di hidupnya, seperti saat bersekolah dulu, Ipit merasa berkat <i>cheerleading</i> ia bisa lebih mudah menghafal pelajaran saat ujian tiba. Tanpa perlu membaca berulang-ulang, cukup dengan mendengarkan teman-temannya berbicara, Ipit bisa menghafal pelajaran.\n</div><div>\n</div><div>Sejak bergabung dengan tim <i>cheerleader</i>, Ipit merasa kepercayaan dirinya meningkat. Begitu banyak prestasi yang ia dapat selama 16 tahun menjadi <i>cheerleader</i>. Prestasi di dalam maupun luar negeri sudah ia peroleh sebagai anggota <i>cheerleader</i>. Selain menjadi <i>cheerleader</i>, Ipit bekerja di sebuah pusat pelatihan fisik di Jakarta. Sempat juga ia mengajar di Malaysia selama satu tahun. Di tempat pelatihan fisik tersebut, Ipit mengajar anak-anak mulai dari usia 4 tahun dan bidang yang dipegangnya adalah <i>gymnastic</i> dan <i>cheerleading.\n</i></div><div>\n</div><div><i>Cheerleading</i> untuk Ipit bukan hanya sekadar hobi, namun bisa menjadi sumber penghasilan. Selain bekerja di pusat pelatihan fisik anak, Ipit memegang beberapa tim <i>cheerleader</i> untuk dilatih. Menurut Ipit, bidang yang ia fokuskan sekarang adalah cheerleading. Ipit juga sering menerima <i>job</i> untuk tampil di berbagai<i> event</i>, di program TV, ataupun sebagai bintang iklan bersama <i>Dreams All Stars</i>. Sudah banyak pundi-pundi yang ia dapatkan dari profesinya sebagai <i>cheerleader.</i>\n</div><div>\n</div><div>Namun, dari segala keberhasilan yang dicapainya, Ipit sempat mengalami masa-masa sulit akibat banyak orang yang meremehkan dirinya untuk bergabung dengan tim pemandu sorak ini. Sebelum tahun 2006, cheerleader laki-laki sangat tabu untuk masyarakat menurut Ipit. Pada awal tahun ia menjadi <i>cheerleader</i>, banyak teman <i>cheerleader</i> laki-lakinya yang tidak tahan akan cibiran yang ditujukan ke mereka sebagai <i>cheerleader </i>laki-laki.\n</div><div>\n</div><div>“Pada saat angkatan pertama aku di SMA, dari sekian orang yang bertahan cuma aku. Karena mereka ngga tahan <i>judgemental</i> dari teman-teman sekitar yang dibilangnya (mohon maaf) bancilah atau apa, lo kok cowok ikut ini ikut ini? Jadi mungkin mereka belum teredukasi untuk tau kenapa cowok bisa ikut <i>cheers</i>,” kata Ipit.\n</div><div>\n</div><div>Ipit juga memberi pengetahuan lain, salah satu orang penting di Amerika John F. Kennedy pernah menjadi anggota <i>cheerleader</i>.</div></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"><font color=\"#ff0000\"><b>R i d w a n &nbsp; F a u z i</b></font></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><p>&nbsp;&nbsp;&nbsp;&nbsp;“Aku pribadi udah mulai suka dengan <i>cheerleading </i>dari SMP, mulai liat-liat ini apasih olahraga apasih? Kebetulan di SMA ada <i>open recruitment</i> ikutlah,” ujar Ridwan Fauzi (31), anggota <i>Dreams All Stars </i>saat ditemui di Gedung Senam Raden Inten, Buaran, Jakarta Timur.<br></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Berawal dari merebaknya film <i>Bring It On</i> di tahun 2000 yang menceritakan tentang kehidupan tim pemandu sorak, membuat seorang laki-laki bernama Ridwan Fauzi ini tertarik dengan <i>cheerleading</i>. </div><br><div>&nbsp;&nbsp;&nbsp;&nbsp;Ridwan Fauzi biasa disapa Ipit, sudah memasuki tahun ke-16 di dunia <i>cheerleading</i>. Ipit mulai menjalani hari-hari sebagai seorang <i>cheerleader </i>sejak memasuki SMA. Awalnya ia bersama kurang lebih 10 anggota <i>cheerleader</i> laki-laki lainnya dalam tim SMALE (SMA 54 Jakarta), namun hanya ia yang berhasil bertahan hingga saat ini. </div><br><div>&nbsp;&nbsp;&nbsp;&nbsp;Hal tersebut memberi kebanggaan bagi dirinya karena ia merasa mempunyai mental yang lebih kuat dibanding teman-temannya sesama <i>cheerleader</i> laki-laki. Karena pada saat itu, di Indonesia sendiri <i>cheerleader</i> laki-laki sangatlah tabu.\n</div><div>\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;“Karena cinta. Udah suka banget, udah mendarah daginglah bisa dibilang,” ujar Ipit dengan senyumnya yang lebar.\n</div><div>\n</div><div>Ipit merasa kecintaannya terhadap dunia <i>cheerleading</i> mampu memberi semangat untuk mengajak sanak saudaranya ikut bergabung ke dunia <i>cheerleading</i>.</div><br><div>&nbsp;&nbsp;&nbsp;&nbsp; Begitu banyak manfaat <i>cheerleading</i> di hidupnya, seperti saat bersekolah dulu, Ipit merasa berkat <i>cheerleading</i> ia bisa lebih mudah menghafal pelajaran saat ujian tiba. Tanpa perlu membaca berulang-ulang, cukup dengan mendengarkan teman-temannya berbicara, Ipit bisa menghafal pelajaran.</div><p></p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Sejak bergabung dengan tim <i>cheerleader</i>, Ipit merasa kepercayaan dirinya meningkat. Begitu banyak prestasi yang ia dapat selama 16 tahun menjadi <i>cheerleader</i>. Prestasi di dalam maupun luar negeri sudah ia peroleh sebagai anggota <i>cheerleader</i>. </div><br><div>&nbsp;&nbsp;&nbsp;&nbsp;Selain menjadi <i>cheerleader</i>, Ipit bekerja di sebuah pusat pelatihan fisik di Jakarta. Sempat juga ia mengajar di Malaysia selama satu tahun. Di tempat pelatihan fisik tersebut, Ipit mengajar anak-anak mulai dari usia 4 tahun dan bidang yang dipegangnya adalah <i>gymnastic</i> dan <i>cheerleading.\n</i></div><div>\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<i>Cheerleading</i> untuk Ipit bukan hanya sekadar hobi, namun bisa menjadi sumber penghasilan. Selain bekerja di pusat pelatihan fisik anak, Ipit memegang beberapa tim <i>cheerleader</i> untuk dilatih. Menurut Ipit, bidang yang ia fokuskan sekarang adalah cheerleading. Ipit juga sering menerima <i>job</i> untuk tampil di berbagai<i> event</i>, di program TV, ataupun sebagai bintang iklan bersama <i>Dreams All Stars</i>. Sudah banyak pundi-pundi yang ia dapatkan dari profesinya sebagai <i>cheerleader.</i></div><div><i><br></i>\n</div><div>\n</div><div>&nbsp;&nbsp;&nbsp;&nbsp;Namun, dari segala keberhasilan yang dicapainya, Ipit sempat mengalami masa-masa sulit akibat banyak orang yang meremehkan dirinya untuk bergabung dengan tim pemandu sorak ini. Sebelum tahun 2006, cheerleader laki-laki sangat tabu untuk masyarakat menurut Ipit. Pada awal tahun ia menjadi <i>cheerleader</i>, banyak teman <i>cheerleader</i> laki-lakinya yang tidak tahan akan cibiran yang ditujukan ke mereka sebagai <i>cheerleader </i>laki-laki.</div><p></p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;“Pada saat angkatan pertama aku di SMA, dari sekian orang yang bertahan cuma aku. Karena mereka ngga tahan <i>judgemental </i>dari teman-teman sekitar yang dibilangnya (mohon maaf) bancilah atau apa, lo kok cowok ikut ini ikut ini? Jadi mungkin mereka belum teredukasi untuk tau kenapa cowok bisa ikut <i>cheers</i>,” kata Ipit.</div><br><div>\n</div><div>\n</div><div>&nbsp;&nbsp;&nbsp;&nbsp;Ipit juga memberi pengetahuan lain, salah satu orang penting di Amerika John F. Kennedy pernah menjadi anggota <i>cheerleader</i>.</div><p></p></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "qTZk2hKqDt",
+          "_anchor": "content4-j",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "content4-j"
+          "_params": {}
         },
         {
           "_styles": {
@@ -374,13 +423,422 @@
             }
           },
           "_name": "video3",
-          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"80\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#149dcc\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\" checked>\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ffffff\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=qGwXGj5QCYY&t=1s&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"80\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#032f55\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=qGwXGj5QCYY&t=1s&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
           "_cid": "qTZ0ibST2C",
           "_anchor": "video3-h",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676",
+              "text-align": "left"
+            },
+            "H2": {
+              "text-align": "left",
+              "color": "#ff0000"
+            },
+            ".mbr-section-subtitle P": {
+              "color": "#032f55"
+            },
+            ".mbr-section-subtitle DIV": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    A d z h a &nbsp;r u l &nbsp; F u a d</h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><p>&nbsp;&nbsp;&nbsp;&nbsp;Adzharul Fuad, atau biasa dipanggil Ade merupakan anggota DAS yang telah menggeluti dunia cheerleader selama 10 tahun.</p><p>Awalnya Ade bergabung dengan cheer membantu mengisi kekosongan anggota cheerleader saat ia SMP yang kekurangan orang untuk mengikuti perlombaan. Selain ia ingin membantu tim cheers smp, ade juga merasa tertarik dengan cheers karena baginya cheers merupakan suatu hal yang baru.</p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Menurut ade tak ada perbedaan antara cheer laki-laki dan perempuan, semua hal dilakukan dalam latihan sama. Mulai dari streching, latihan teknik dan lain. Namun, karena tim DAS merupakan tim Coed laki-laki lebih diutamakan menjadi base atau sebagai tumpuan.\n</div><p></p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Selama 10 tahun ade berkecimpung didunia cheers, ia mengaku mendapat banyak pengalaman. Baik dari segi presasi maupun finansial. Ia pernah meraih juara 1 seasia tenggara dan memenangkan berbagai perlombaan di bidang serupa.\n</div><p></p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Dari cheers ini juga Ade bisa terlibat dalam suatu film, iklan, sinetron, video clip, dan lain-lain. Ia menuturkan cheers membuat ia berpenghasilan sendiri dan dapat mandiri. Bahkan dari cheer ini Ade dapat pergi keluar negeri pada usia muda saat dia masih duduk di bangku SMA.</div><p></p></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW1rHsrh9o",
+          "_anchor": "content4-y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when (@fullWidth = false)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "background": "@bgColor",
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(45deg, @bgColor, @color2)"
+            },
+            ".video-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".video-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "video1",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ff0000\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=4gzlCTUcFLA&index=3&list=PLBAqf3c8RypdRO0yuoaKlrBiNsQD8n-cZ&t=0s&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_cid": "qW1rLoT6a9",
+          "_anchor": "video1-z",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676",
+              "text-align": "left"
+            },
+            "H2": {
+              "color": "#ff0000"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">W a h y u &nbsp;A J &amp; S a p u t r a &nbsp;A l z u f r i</h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><p>&nbsp;&nbsp;&nbsp;&nbsp;Wahyu dan Saputra, adalah anggota DAS laki-laki yang awalnya berasal dari “Bboy”. Bboy atau <i>breakdance</i> adalah tarian yang jauh berbeda dengan <i>dance</i>. Bboy sendiri terkenal dengan orang-orang yang liar, bebas dan tak bisa dikekang, dimana <i>cheerleader</i> yang pada dasarnya membutuhkan komitmen dan kerja tim. Namun, Bboy dan <i>cheerleader</i> memiliki kesamaan dalam kekuatan fisik. \n</p><div><br></div><p></p></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW1EHdT1sc",
+          "_anchor": "content4-14",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-multiline mbr-article>\n                <blockquote><b><span style=\"font-style: normal;\">“Di cheers itu sama aja kayak breakdance, bedanya kalau di</span> cheers<span style=\"font-style: normal;\"> diputar-putarnya diatas, jadi kayak tertarik gitu sama aja dengan </span>breakdance<span style=\"font-style: normal;\">,” ujar Wahyu sesuai latihan </span>cheerleader<span style=\"font-style: normal;\">.\n</span></b></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW1FydateC",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content2-16"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676",
+              "text-align": "left"
+            },
+            "H2": {
+              "text-align": "left"
+            },
+            ".mbr-section-subtitle DIV": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\"><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Dilain sisi, Saputra merasa tertantang untuk bergabung dengan <i>cheerleader</i> karena penilaian terhadap <i>cheers</i> yang jauh berbeda dengan kehidupan Bboy yang liar tanpa aturan diharuskan untuk bermain tim seperti <i>cheerleader</i>. Namun, setelah Saputra mencoba mengikuti latihan sekali dua kali bersama Kak Annie, ia merasa ada hal baru yang menarik dan menantang didalam<i> cheers </i>yang membuatnya bertahan  hingga sekarang.</div><br><div>\n</div><div>&nbsp;&nbsp;&nbsp;&nbsp;Anggapan bahwa <i>cheerleader</i> laki-laki itu “gak banget” mungkin tidak berlaku bagi kedua anggota DAS ini, pasalnya Saputra sendiri memiliki kegiatan lain diluar <i>cheers</i> yang sangat \"laki banget\", yaitu otomotif. Berbeda dengan Saputra, Wahyu masih mengeluti dunia Bboy sebagai kegiatan lain diluar <i>cheers</i>.</div><br><div>\n</div><div>&nbsp;&nbsp;&nbsp;&nbsp;Saputra yang bergabung kurang lebih 12 tahun didalam <i>cheerleader </i>sudah meraih berbagai prestasi, mulai dari memang lomba <i>cheerleader</i> luar maupun dalam negeri, bisa masuk dalam industri pertelevisian dan berbagai prestasi lainnya. Hal itu tidak terlepas dari komitmennya yang terus menampilkan yang terbaik dan tidak mudah besar kepala, kata saputra yang memiliki posisi sebagai side dalam <i>cheerleader.</i></div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Wahyu juga menuturkan bahwa dari cheerleader ini juga ia mendapatkan banyak penghasilan. Mulai dari&nbsp;<i>reward</i>&nbsp;menang perlombaan, masuk dunia industri pertelevisian dan bisa sampai keluar negeri.</div><br><div>\n</div><div>&nbsp;&nbsp;&nbsp;&nbsp;Wahyu dan Saputra pada awalnya tidak mendapat dukungan dari orang sekitarnya karena mereka berpikir <i>cheerleader</i> itu tidak menghasilkan apa-apa. Namun, seiring berjalannya waktu dan melihat prestasi-prestasi yang mereka capai, orang sekitar wahyu dan saputra pun mulai mendukung apa yang mereka lakukan.</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Selama mereka bergabung dengan <i>cheers </i>banyak sekali suka dan duka yang mereka alami. Mulai dari cibiran terhadap mereka yang dianggap bukan laki-laki seutuhnya,maupun cedera ringan sampai berat.  Namun, Wahyu dan Saputra menuturkan bahwa semua itu adalah bagian dari perjalanan <i>cheers</i> mereka yang harus dinikmati. \n</div><div><br></div><p></p></h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW1Clz9zCA",
+          "_anchor": "content4-12",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when (@fullWidth = false)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "background": "@bgColor",
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(45deg, @bgColor, @color2)"
+            },
+            ".video-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".video-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "video1",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#b2ccd2\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=1GD7KvTnkxc&index=1&list=PLBAqf3c8RypdRO0yuoaKlrBiNsQD8n-cZ&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_cid": "qW1Chuc3u2",
+          "_anchor": "video1-11",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H2": {
+              "color": "#ff0000"
+            }
+          },
+          "_name": "content5",
+          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/yoiii-1080x1350.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\">\n                    S t e r e o t y p e</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Article header with background image and parallax effect\n                </h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2F1xR27g",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content5-17"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            ".mbr-text": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p>&nbsp;&nbsp;&nbsp;&nbsp;<i>Cheerleader</i> atau pemandu sorak yang beranggotakan laki-laki, selalu menjadi perbincangan yang hangat dikalangan masyarakat awam. Sebagian besar mereka menganggap bahwa laki – laki yang ikut<i> cheers </i>itu aneh. Hal ini disebabkan ketidaktahuan mereka  akan sejarah awal mula cheers terbentuk. Dimana <i>extreme sport</i> ini awalnya memang diisi oleh sekumpulan laki – laki yang menjadi pemberi semangat team football di amerika.<span style=\"font-size: 1rem;\"></span></p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Anie, pendiri <i>Dream All Star </i>menjelaskan bahwa <i>cheerleaders</i> awalnya adalah laki – laki berasal dari Minnesota, mereka berkumpul dan membuat suatu perkumpulan  laki-laki yang menyorak – nyorakan suatu pertandingan <i>football</i> di Minnesota, Amerika Serikat.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;“Sebenernya awal <i>cheers</i> itu adalah cowo jadi bukan suatu keanehan lagi, bahkan sampe tahun 1945 itu <i>cheerleader</i> masih cowok semua bahkan,” ujar Anie disela-sela latihan rutin DAS.\n</div><div>Seiring berkembangnya waktu, era <i>cheers</i> laki-laki perlahan mulai menyurut dikarenakan gerakan dari seorang perempuan lebih indah dan enak dilihat, maka akhirnya muncul <i>cheerleader</i> perempuan. \n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Di Indonesia sendiri masih banyak masyarakat yang menilai bahwa laki – laki yang mengikuti <i>cheerleader</i> itu aneh dan tak sedikit dari mereka cenderung berpendapat negatif.  Mereka memilki <i>stereotype</i> salah tentang <i>cheerleader</i> yang dianggap kemayu untuk laki-laki. Padahal kegiatan yang unik dan keren ini tak sembarang orang bisa melakukannya. Diperlukan latihan dan skill yang mumpuni.&nbsp;</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Banyak hal  yang harus dikuasai oleh <i>cheerleader</i> laki – laki, seperti <i>tumbling</i>, teknik menahan berat badan, teknik bagaimana cara melempar dan menangkap seseorang yang terbang keudara. Tidak terlalu banyak perbedan untuk skill yang harus dimilki oleh cheers laki – laki dan perempuan, <i>flexibility</i>nya, <i>gymnastic</i>nya masih sama, hanya saja seorang laki – laki yang membedakan adalah kekuatanya, <i>insting</i>nya dan kecepatan mereka.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Inti dari olahraraga <i>cheers</i> adalah kerjasama yang baik harus dimilki semua anggotanya bukan tentang kekuatan dan skill yang  dimilki setiap individu yang menjadi anggota <i>cheerleader</i>.\n</div><div>Mengenai <i>streotype</i> tentang <i>cheers </i>di Indonesia yang memang lebih banyak perempuan, masyarakat pun tidak dapat disalahkan bila mereka menilai seorang cheers laki – laki itu adalah “banci”, karna pandangan yang belum terbentuk dengan baik.\n</div><div><br></div><div>&nbsp; &nbsp; Semua ini hanya tentang bagaimana cara mengedukasi masyarakat tentang<i> cheers</i> yang bukan hanya pemandu sorak, <i>dance</i>, dan hanya bisa dilakukan oleh perempuan. Indonesia harus tahu bahwa <i>cheerleader</i> adalah <i>extreme sport</i> ke – 5 di dunia dengan peraturan “<i>safety, safety, safety and you can do anything, everything,</i>” dengan hal itu dapat membuat <i>cheers </i>laki – laki bangga bukan sekedar pemandu sorak, rok pendek, dan perempuan yang diterbangkan keatas.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<i>Cheers</i> laki – laki harus berbangga karna<i> cheerleader</i> adalah olahraga ekstrim dimana seorang laki – laki menerbangkan perempuan menggunakn teknik, latihan yang baik, dan olahraga yang baik untuk menjadi <i>cheerleader</i> professional.\n</div><div>&nbsp;&nbsp;&nbsp;&nbsp;<br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Anie, pendiri <i>Dream All Star </i>yang merupakan tim <i>cheers</i> pertama yang memilki anggota laki – laki ditahun 2003 dengan nama <i>Dream Sport</i>. Anie merupakan pionir <i>mix cheerleader </i>pertama di Indonesia hingga akhirnya berganti nama menjadi <i>Dream All Star</i> di tahun 2006. Sejak tahun 2008 <i>Dream All Star</i> mulain muncul dan tampil di stasiun – stasiun tv nasional Indonesia.\n</div><div><br></div><div><b><br></b></div><p></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2HKAukZI",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-19"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-multiline mbr-article>\n                <blockquote><b>“Jadi cowok di cheerleader harus bangga banget, karena satu you are more than an atlet karena kamu juga sebagai entertain , sebagai sportman, cowok yang sport, kalo kamu gapunya fisik yang bagus gapunya mental yang bagus kamu gaakan bisa jadi cheerleader,” </b><span style=\"font-style: normal;\"><b>ungkap Anie saat ditanya tentang adanya laki – laki yang ragu menjadi cheers.</b></span><b>\n</b></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2J76U0hc",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content2-1b"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            ".mbr-text DIV": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n<div>&nbsp;&nbsp;&nbsp;&nbsp;Anie berharap kamu dapat menjadi pejuang – pejuang <i>cheers</i> Indonesia bahwa laki – laki bisa menajdi <i>cheers</i>, karena sudah banyak <i>cheerleader</i> laki-laki yang telah <i>go international </i>dan Indonesia menjadi negara yang diperhitungkan kemampuan <i>cheerleading</i>nya. \n</div></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2JiE0iU0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-1c"
+        },
+        {
+          "_styles": {
+            "& when (@fullWidth = false)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "background": "@bgColor",
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(45deg, @bgColor, @color2)"
+            },
+            ".video-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".video-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "video1",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth==false\">\n\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth==false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#b2ccd2\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container':fullWidth==false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://www.youtube.com/watch?v=6Gtz9R4zIU0&index=4&list=PLBAqf3c8RypdRO0yuoaKlrBiNsQD8n-cZ&loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_cid": "qW2MxhFfi8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "video1-1d"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H2": {
+              "color": "#ff0000"
+            }
+          },
+          "_name": "content5",
+          "_customHTML": "<section class=\"mbr-section content5\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/jumbotron.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center mbr-bold mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\">\n                    M e r e k a &nbsp; y a n g<br> &nbsp; M u n d u r</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Article header with background image and parallax effect\n                </h3>\n                <p class=\"mbr-text align-center mbr-white pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\" mbr-article data-multiline>\n                    Shape your future web project with sharp design and refine coded functions\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                    <a class=\"btn btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2PIsbP3r",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content5-1e"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            ".mbr-text": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p>&nbsp;&nbsp;&nbsp;&nbsp;Kehidupan sebagai anggota <i>cheerleader</i> laki-laki tidak selamanya indah. Banyak dari mereka yang justru memutuskan untuk pergi dari dunia cheerleader karena tidak sanggup menerima perkataan orang sekitar. Cibiran yang mereka dapat justru menjadi momok yang tidak ingin mereka dengar. \n</p><p></p><div>&nbsp;&nbsp;&nbsp;&nbsp;Rifaldy Meidianto (20), seorang mantan anggota cheerleader SMA N 113 Jakarta Timur yang kini sedang menjalankan pendidikan di TNI Angkatan Udara. Aldo, sapaan akrab lelaki berkepala plontos dengan badan yang proporsional itu. Aldo pernah masuk ke dunia<i> cheerleading</i> saat masih duduk di bangku SMA. Saat itu Aldo merasa hobinya di dunia <i>modern dance</i> lumayan cocok dengan <i>cheerleading</i>.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;“Karena gue juga suka joget, jadi ya gue coba aja dulu masuk ke <i>cheers </i>ditawarin sama temen gue. Dulu sempet mau lomba gitu kekurangan orang, yaudah gue menjadi <i>volunteer</i> untuk ngebantu mereka lomba,” kata Aldo yang memang berlatarbelakang sebagai anggota <i>male dance group</i> di sekolah. \n</div><div><br></div><div><i>&nbsp;&nbsp;&nbsp;&nbsp;Dance group </i>yang diikuti oleh Aldo bernama Gerlay. Biasanya penampilan Gerlay sangat ditunggu-tunggu untuk setiap acara yang diselenggarakan oleh SMAN 113. <i>Dance group</i> ini memberikan penampilan <i>modern dance</i> dan diselingi dengan tarian komedi yang membawa gelak tawa penonton. Dengan latar belakangnya itu pun Aldo tertarik untuk membantu teman-teman <i>cheerleader</i> di sekolahnya.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Menurutnya, <i>cheerleading</i> bukan hal mudah untuk dilakukan. Sebelum masuk, Aldo sempat ragu dengan apa yang biasa dilakukan di dalam dunia <i>cheerleading</i>. Ternyata, <i>cheerleading</i> adalah olahraga ekstrem yang sangat menguras tenaga, Dari mulai pemanasan sampai ke latihan inti, semuanya cukup membuat keringat bercucuran. Bahkan sesekali anggota <i>cheerleader</i> mendapat hadiah ‘latihan fisik’ dari pelatih mereka, mirip dengan olahraga lainnya.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Saat awal menjadi <i>volunteer</i> untuk tim pemandu sorak SPARKZ yang sebelumnya bernama D.O.T  ini, Aldo merasa senang dan menikmati hal-hal di dalam dunia <i>cheerleading</i>. Bahkan Aldo mengajak anggota <i>dance group</i>nya untuk ikut tim <i>cheerleader</i>.</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Namun, peran serta Aldo di tim SPARKZ tidak bertahan lama. Aldo memutuskan untuk hengkang bersama temannya, Hasan. Aldo merasa semakin lama semakin tidak nyaman menjadi anggota cheerleading karena banyak omongan-omongan buruk yang tertuju padanya.</div><p></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2Tt5k16P",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-1f"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-multiline mbr-article>\n                <blockquote><b>“Iya, ngga lama gue di SPARKZ. Karena, ya, gitu, ada aja omongan yang sampai ke gue tentang cheers. Ya dibilang cowo kecewe-cewean lah, dibilang jiwa mesum karena cuma pengen pegang-pegang flyer di cheerleader, masih banyak lagi,” \n</b></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2UMBpbvy",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content2-1g"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            ".mbr-text DIV": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><div>&nbsp;&nbsp;&nbsp;&nbsp;Stereotip yang Aldo dapatkan saat menjadi anggota <i>cheerleader</i> sangatlah tidak benar, menurutnya. Meskipun Aldo merasa kurang setuju dengan masyarakat yang menstereotipkan <i>cheerleader</i>, hal stereotip inilah menjadi salah satu penyebab Aldo dan Hasan hengkang dari dunia <i>cheerleading</i>. Saat menjadi anggota tim <i>cheerleader</i>, tanggapan keluarga tidak lah selalu buruk. Seringkali Aldo mendapat dukungan ketika ingin melakukan lomba. \n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Menurut Aldo, <i>cheerleader</i> itu kuat. Pemandu sorak bukan hanya pasukan orang dengan pompom di tangan dan mendukung pemain bola. <i>Cheerleading</i> menjadi olahraga yang sangat menyenangkan. Olahraga ekstrem ini sebenarnya cocok untuk laki-laki, dan selama ia berada di tim SPARKZ, lelaki mendapat tugasnya sendiri yang berbeda dengan perempuan.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Saat hengkang, Aldo mengatakan tidak begitu menyesal meninggalkan dunia <i>cheerleading</i> meskipun kini anggota <i>cheerleading </i>laki-laki sudah sangat banyak di luar sana. Jika mendapatkan kesempatan untuk bergabung kembali, Aldo mengatakan tidak akan bergabung kembali karena merasa sudah bukan bidangnya lagi.</div><div>&nbsp;&nbsp;&nbsp;&nbsp;</div><div>&nbsp;&nbsp;&nbsp;&nbsp; Aldo kini memilih fokus terhadap pendidikannya menjadi bintara di TNI Angkatan Udara. Aldo sudah tidak ingin kembali ke dunia <i>modern dance</i> ataupun <i>cheerleading</i> yang menjadi bagian dirinya di bangku sekolah dulu.\n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Aldo sempat berbagi cerita tentang pengalaman berkesan saat menjadi <i>cheerleader</i>. Menjadi <i>cheerleader</i> bagian <i>base</i> bukanlah hal yang mudah. Aldo sempat beberapa kali tertimpa<i> flyer </i>yang diangkatnya. Kecekatan sangat diperlukan saat menjadi<i> base </i>menurutnya. Keselamatan <i>flyer</i> menjadi tanggung jawab<i> base</i> dalam satu <i>stunting</i>. \n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Sekali waktu, saat hari ulang tahun sekolahnya, Aldo tampil dengan anggota <i>cheerleader</i> lainnya setelah tampil bersama <i>dance group</i>nya. Saat tampil ada beberapa adegan lucu ketika sedang membuat <i>tumbling</i>. Entah bagaimana, ia lupa atau tidak mendengar. Ketika sedang ingin <i>cartwheel,</i> Aldo justru menabrak temannya sendiri hingga terjatuh duduk. Salah dengar aba-aba menjadi kesalahan yang bisa fatal untuk tim<i> cheerleader</i>. </div><div>&nbsp;&nbsp;&nbsp;&nbsp;</div><div>&nbsp;&nbsp;&nbsp;&nbsp;Terkadang ada rasa rindu yang menghampiri, namun hanya cukup untuk dikenang. Kebersamaan dengan anggota <i>cheerleader</i> menjadi satu hal yang Aldo rindukan. Canda, tawa, tangis, menjadi makanan sehari-hari yang disajikan oleh anggota <i>cheerleader</i> lainnya. \n</div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Aldo berpesan untuk laki-laki di luar sana, yang tertarik untuk menjadi<i> cheerleader</i> agar tidak perlu takut. <i>Cheerleader</i> laki-laki kini tidak lagi akan mendapat penilaian buruk dari orang-orang.\n&nbsp;<span style=\"font-size: 1rem;\">“Salurkan hobimu, cuci omongan mereka dengan prestasimu,” sebuah kata motivasi dari Aldo.&nbsp;</span></div><div><br></div><div>&nbsp;&nbsp;&nbsp;&nbsp;Menurut Aldo, kini <i>cheerleader </i>laki-laki mampu menepis segala cibiran orang di luar sana yang tidak peduli dengan manusia lainnya. Banyak <i>cheerleader</i> laki-laki yang sukses menjadikan <i>cheerleading</i> sebagai <i>side job</i>nya. Bahkan, saat ini banyak perempuan yang menjadi cheerleader sangat menyayangi pekerjaannya.</div><div><span style=\"font-size: 1rem;\"><br></span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-size: 1rem;\">Cibiran membuat mental orang-orang lemah menjadi was-was untuk apa yang akan mereka lakukan saat perlombaan. Justru ketenangan harus mereka fokuskan.&nbsp;</span><span style=\"font-size: 1rem;\"><i>Cheerleading</i> mampu memberi kesan untuk hidup Aldo yang sempat berada di tim cheerleader. Kepercayaan dirinya juga bertambah saat mengikuti <i>cheer</i>. Namun, setiap anggota <i>cheerleader</i> laki-laki memang harus kebal dan tahan banting dengan segala cibiran yang didapatkan. &nbsp;</span></div><div><span style=\"font-size: 1rem;\"><br></span></div><div><br></div></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qW2V7STmwT",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-1h"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background": "@bgColor",
+            ".media-container-row": {
+              "margin": "0 auto",
+              "align-items": "stretch",
+              ".img-item": {
+                "display": "flex",
+                "flex-direction": "column",
+                "justify-content": "center",
+                "position": "relative",
+                "width": "100%",
+                "z-index": "1",
+                "img": {
+                  "width": "100%",
+                  "min-height": "1px"
+                },
+                ".img-caption": {
+                  "background": "@cpBg",
+                  "z-index": "2",
+                  "padding": "1rem 1rem",
+                  "word-break": "break-word",
+                  "p": {
+                    "margin-bottom": "0"
+                  }
+                },
+                "&.item1": {
+                  "padding": "0 2rem 0 0"
+                }
+              }
+            },
+            "@media (max-width: 992px)": {
+              ".img-item": {
+                "width": "100% !important",
+                "&.item1": {
+                  "width": "100%",
+                  "flex-basis": "initial !important",
+                  "padding": "0 0 2rem 0 !important"
+                }
+              }
+            },
+            "P": {
+              "color": "#032f55"
+            }
+          },
+          "_name": "content13",
+          "_customHTML": "<section>\n    <mbr-parameters>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Width\" name=\"contentWidth\" min=\"66\" max=\"100\" value=\"66\" step=\"1\">\n        <input type=\"range\" inline title=\"Sizes\" name=\"proportions\" min=\"30\" max=\"300\" value=\"149\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Caption\" name=\"showCaption\" checked>\n        <input type=\"color\" title=\"Caption Background\" name=\"cpBg\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div class=\"container\">\n            <div class=\"media-container-row\" mbr-style=\"{'width':contentWidth+'%'}\">\n                <div class=\"img-item item1\" mbr-style=\"{'width':proportions+'%'}\">\n                    <img src=\"@PROJECT_PATH@/assets/images/s-8169725315100-924x1386.jpg\" alt title>\n                    <div class=\"img-caption\" mbr-if=\"showCaption\">\n                        <p class=\"mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-7\">\n                            Aldo saat masih menjadi anggota tim cheerleaders SPARKZ (Dok. Pribadi)</p>\n                    </div>\n                </div>\n                <div class=\"img-item\">\n                    <img src=\"@PROJECT_PATH@/assets/images/img-7219-478x667.jpg\" alt title>\n                    <div class=\"img-caption\" mbr-if=\"showCaption\">\n                        <p class=\"mbr-fonts-style align-center mbr-black\" mbr-theme-style=\"display-7\">\n                            Aldo saat ini (Dok.Pribadi)</p>\n                    </div>\n                </div>\n            </div>\n    </div>\n</section>",
+          "_cid": "qW2XIAkdjZ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content13-1i"
         }
       ]
     }
